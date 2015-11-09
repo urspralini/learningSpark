@@ -1,6 +1,6 @@
-package com.prabhu
+package com.prabhu.spark.basics
 
-import org.apache.spark.{SparkContext, SparkConf}
+import org.apache.spark.{SparkConf, SparkContext}
 
 /**
  * <p>
@@ -9,11 +9,11 @@ import org.apache.spark.{SparkContext, SparkConf}
  * @author Prabhu R Babu
  *         (11/8/15 12:50 PM)
  */
-object ScalaApp {
+object SparkApp {
 
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setMaster("local")
-      .setAppName(ScalaApp.getClass.getSimpleName)
+      .setAppName(SparkApp.getClass.getSimpleName)
     val sc = new SparkContext(conf)
     val lines = sc.textFile("/usr/local/spark/README.md")
     val sparkLines = lines.filter(line => line.contains("Spark"))
