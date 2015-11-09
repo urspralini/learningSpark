@@ -12,6 +12,9 @@ object ScalaApp {
   def main(args: Array[String]) {
     args.map(_.toUpperCase()).foreach(printf("%s ", _))
     println()
+
+    val output = args.map(_.toUpperCase).mkString("[", ", ", "]");
+    println(output)
   }
 
 }
