@@ -25,7 +25,7 @@ object JDBCExample {
   def main(args: Array[String]) {
     //initialize spark configuration
     val conf = new SparkConf().setMaster("local")
-      .setAppName(SparkApp.getClass.getSimpleName)
+      .setAppName(JDBCExample.getClass.getSimpleName)
     //initialize spark context
     val sc = new SparkContext(conf)
     //assume we have a users table with fields (id, name)

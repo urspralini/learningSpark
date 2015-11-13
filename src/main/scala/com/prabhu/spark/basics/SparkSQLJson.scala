@@ -14,7 +14,7 @@ object SparkSQLJson {
   def main (args: Array[String]) {
     //initialize spark configuration
     val conf = new SparkConf().setMaster("local")
-      .setAppName(SparkApp.getClass.getSimpleName)
+      .setAppName(SparkSQLJson.getClass.getSimpleName)
     //initialize spark context
     val sc = new SparkContext(conf)
     //initialize hvie context to read json file
